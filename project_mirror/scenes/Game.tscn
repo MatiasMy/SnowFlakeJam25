@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://drjijqr5tc8ne"]
+
+[ext_resource type="PackedScene" uid="uid://i5br82scl3wh" path="res://scenes/mirrored_boy.tscn" id="1_qbsmt"]
+[ext_resource type="PackedScene" uid="uid://da3oxre7ja4qi" path="res://scenes/the_boy.tscn" id="2_cpr0p"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qbsmt"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="MirroredBoy" parent="." instance=ExtResource("1_qbsmt")]
+position = Vector2(277, -30)
+
+[node name="TheBoy" parent="." instance=ExtResource("2_cpr0p")]
+position = Vector2(-274, -36)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_qbsmt")
