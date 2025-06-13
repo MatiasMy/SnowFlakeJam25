@@ -1,6 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://drjijqr5tc8ne"]
+[gd_scene load_steps=6 format=3 uid="uid://drjijqr5tc8ne"]
 
+[ext_resource type="Script" uid="uid://0d7hdufjl82r" path="res://scripts/cameramovement.gd" id="1_cpr0p"]
 [ext_resource type="PackedScene" uid="uid://i5br82scl3wh" path="res://scenes/mirrored_boy.tscn" id="1_qbsmt"]
+[ext_resource type="PackedScene" uid="uid://7en87f806ogq" path="res://scenes/murder_place.tscn" id="2_78awf"]
 [ext_resource type="PackedScene" uid="uid://da3oxre7ja4qi" path="res://scenes/the_boy.tscn" id="2_cpr0p"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qbsmt"]
@@ -8,6 +10,10 @@
 [node name="Game" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("1_cpr0p")
+
+[node name="MurderPlace" parent="Camera2D" instance=ExtResource("2_78awf")]
+position = Vector2(2, 368)
 
 [node name="MirroredBoy" parent="." instance=ExtResource("1_qbsmt")]
 position = Vector2(277, -30)
