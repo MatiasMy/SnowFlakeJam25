@@ -1,13 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://drjijqr5tc8ne"]
+[gd_scene load_steps=5 format=3 uid="uid://drjijqr5tc8ne"]
 
 [ext_resource type="Script" uid="uid://0d7hdufjl82r" path="res://scripts/cameramovement.gd" id="1_cpr0p"]
 [ext_resource type="PackedScene" uid="uid://i5br82scl3wh" path="res://scenes/mirrored_boy.tscn" id="1_qbsmt"]
 [ext_resource type="PackedScene" uid="uid://7en87f806ogq" path="res://scenes/murder_place.tscn" id="2_78awf"]
 [ext_resource type="PackedScene" uid="uid://da3oxre7ja4qi" path="res://scenes/the_boy.tscn" id="2_cpr0p"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qbsmt"]
-
 [node name="Game" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+rendering_quadrant_size = 32
+format = 2
 
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("1_cpr0p")
@@ -20,8 +22,3 @@ position = Vector2(277, -30)
 
 [node name="TheBoy" parent="." instance=ExtResource("2_cpr0p")]
 position = Vector2(-274, -36)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource("WorldBoundaryShape2D_qbsmt")
