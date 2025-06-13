@@ -1,10 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://7en87f806ogq"]
 
-[ext_resource type="Script" uid="uid://b64xsmiq5vgdp" path="res://scripts/murder_place.gd" id="1_754m4"]
+[ext_resource type="Script" uid="uid://b64xsmiq5vgdp" path="res://Scripts/murder_place.gd" id="1_754m4"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_cugkl"]
 
 [node name="MurderPlace" type="Area2D"]
+collision_mask = 2
 script = ExtResource("1_754m4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
