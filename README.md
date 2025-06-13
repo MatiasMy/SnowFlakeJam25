@@ -10,3 +10,5 @@ git push origin main
 pulling from github with git bash:
 
 git pull origin main
+
+	Thanks for the useful information!
