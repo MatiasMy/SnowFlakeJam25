@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://da3oxre7ja4qi"]
 
-[ext_resource type="Texture2D" uid="uid://berp0cbsdghsu" path="res://assets/tempcharacter1.png" id="1_1q882"]
-[ext_resource type="Script" uid="uid://dwoics6ve8dnk" path="res://scripts/the_boy.gd" id="1_ao2qc"]
+[ext_resource type="Texture2D" uid="uid://berp0cbsdghsu" path="res://Assets/tempcharacter1.png" id="1_1q882"]
+[ext_resource type="Script" uid="uid://dwoics6ve8dnk" path="res://Scripts/the_boy.gd" id="1_ao2qc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ao2qc"]
 animations = [{
@@ -18,6 +18,7 @@ animations = [{
 radius = 16.0
 
 [node name="TheBoy" type="CharacterBody2D"]
+collision_layer = 2
 script = ExtResource("1_ao2qc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
