@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8lrr7851e6l4"]
+
+[ext_resource type="Texture2D" uid="uid://c5dje1xvp7qm" path="res://Assets/Textures/Block.png" id="1_ovn4m"]
+
+[node name="Block" type="Node2D"]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+offset_left = 234.0
+offset_top = 390.0
+offset_right = 309.0
+offset_bottom = 444.0
+texture = ExtResource("1_ovn4m")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
