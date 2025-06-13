@@ -6,8 +6,8 @@ const JUMP_VELOCITY = -500.0
 const DOUBLE_JUMP_VELOCITY = -400.0
 
 var double_jump: bool = true
-
-
+var anim2play: String = "Idle"
+@export var animatedSprite2d: AnimatedSprite2D
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
@@ -27,8 +27,17 @@ func _physics_process(delta: float) -> void:
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	if Input.is_action_pressed("right"):
 		velocity.x =  1 * SPEED * delta * 60
+		anim2play = "WalkR"
 	else: if Input.is_action_pressed("left"):
 		velocity.x = -1 * SPEED * delta * 60
+		anim2play = "WalkL"
 	else:
 		velocity.x = 0
+		anim2play = "Idle"
 	move_and_slide()
+	if !is_on_floor():
+		anim2play = "Jump"
+	print(animatedSprite2d.animation)
+	if animatedSprite2d.animation != anim2play:
+		animatedSprite2d.play(anim2play)
+	animatedSprite2d.play(anim2play)
