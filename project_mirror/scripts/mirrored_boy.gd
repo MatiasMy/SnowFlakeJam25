@@ -10,6 +10,7 @@ var canjump = true
 @onready var timer: Timer = $Timer
 @onready var timer_2: Timer = $Timer2
 
+var bullet = load("res://Scenes/Bullet.tscn")
 var double_jump: bool = true
 var anim2play: String = "Idle"
 @export var animatedSprite2d: AnimatedSprite2D
@@ -55,6 +56,13 @@ func _physics_process(delta: float) -> void:
 			
 	if isplane:
 		anim2play = "IdleP"
+		if Input.is_action_just_pressed("spacebar"):
+			print("Pressed space!")
+			print(position)
+			print(get_global_mouse_position())
+			var newBullet = bullet.instantiate()
+			add_child(newBullet)
+			
 		if Input.is_action_pressed("uparrow"):
 			velocity.y =  -1 * 150 * delta * 60
 			anim2play = "Fly"
