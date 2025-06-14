@@ -4,10 +4,9 @@ class_name Game extends Node2D
 var score: float = 0
 
 func addtoscore():
-	print("fi")
 	score = score + 50
 
 func _process(delta: float) -> void:
-	score += 10*delta
+	score += 2*delta
 	ui.updateScore(score)
 	ui.updateHighScore(score)

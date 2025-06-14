@@ -5,7 +5,12 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -500.0
 const DOUBLE_JUMP_VELOCITY = -400.0
 var isplane: bool = false
+var issuperboyd: bool = false
 var canjump = true
+
+@onready var jumpsound: AudioStreamPlayer2D = $AudioStreamPlayer2D
+
+@onready var shootsound: AudioStreamPlayer2D = $AudioStreamPlayer2D2
 
 @onready var timer: Timer = $Timer
 @onready var timer_2: Timer = $Timer2
@@ -19,10 +24,11 @@ func beplane() -> void:
 	timer.start()
 func beother() -> void:
 	isplane = false
+	issuperboyd = true
 
 func _physics_process(delta: float) -> void:
 	
-	if !isplane:
+	if !isplane && !issuperboyd:
 		if not is_on_floor():
 			velocity += get_gravity() * delta
 		if is_on_floor():
@@ -34,10 +40,12 @@ func _physics_process(delta: float) -> void:
 		if (is_on_floor() == false) and canjump and timer_2.is_stopped():
 			timer_2.start()
 		if Input.is_action_just_pressed("uparrow") && !is_on_floor() && double_jump && !canjump:
+			jumpsound.play()
 			velocity.y = DOUBLE_JUMP_VELOCITY
 			double_jump = false;
 		# Handle jump.
 		if Input.is_action_just_pressed("uparrow") && canjump:
+			jumpsound.play()
 			velocity.y = JUMP_VELOCITY
 			canjump = false
 	
@@ -54,12 +62,10 @@ func _physics_process(delta: float) -> void:
 		if !is_on_floor():
 			anim2play = "Jump"
 			
-	if isplane:
+	if isplane && !issuperboyd:
 		anim2play = "IdleP"
 		if Input.is_action_just_pressed("spacebar"):
-			print("Pressed space!")
-			print(position)
-			print(get_global_mouse_position())
+			shootsound.play()
 			var newBullet = bullet.instantiate()
 			add_child(newBullet)
 			
@@ -75,6 +81,29 @@ func _physics_process(delta: float) -> void:
 		elif Input.is_action_pressed("leftarrow"):
 			velocity.x =  -1 * 150 * delta * 60
 			anim2play = "Fly"
+		else :
+			velocity.x = 0
+			velocity.y = 0
+		
+		move_and_slide()
+	if animatedSprite2d.animation != anim2play:
+		animatedSprite2d.play(anim2play)
+	animatedSprite2d.play(anim2play)
+	
+	if issuperboyd:
+		anim2play = "superboyd"
+		if Input.is_action_pressed("uparrow"):
+			velocity.y =  -1 * 150 * delta * 60
+			anim2play = "superboyd2"
+		elif Input.is_action_pressed("downarrow"):
+			velocity.y =  1 * 150 * delta * 60
+			anim2play = "superboyd2"
+		elif Input.is_action_pressed("rightarrow"):
+			velocity.x =  1 * 150 * delta * 60
+			anim2play = "superboyd2"
+		elif Input.is_action_pressed("leftarrow"):
+			velocity.x =  -1 * 150 * delta * 60
+			anim2play = "superboyd2"
 		else :
 			velocity.x = 0
 			velocity.y = 0

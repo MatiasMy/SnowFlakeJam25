@@ -1,14 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://c2bx1o6rt0gki"]
+[gd_scene load_steps=9 format=3 uid="uid://c2bx1o6rt0gki"]
 
 [ext_resource type="Script" uid="uid://0d7hdufjl82r" path="res://Scripts/cameramovement.gd" id="1_f1cf7"]
 [ext_resource type="PackedScene" uid="uid://7en87f806ogq" path="res://Scenes/murder_place.tscn" id="2_mhsga"]
 [ext_resource type="Texture2D" uid="uid://b6w3vj4kwfkt0" path="res://Assets/Textures/Mirror.png" id="3_mhsga"]
 [ext_resource type="Texture2D" uid="uid://i00fn6dj0ngq" path="res://Assets/Textures/Skybox.png" id="4_xfji6"]
+[ext_resource type="AudioStream" uid="uid://cthalh4ok38jd" path="res://Assets/Sounds/Gametus jamitus ehkä jopa lopetus.mp3" id="5_x3vey"]
+[ext_resource type="AudioStream" uid="uid://bmvv24tg2xenq" path="res://Assets/Sounds/Gamejam (Kahisevaa).mp3" id="6_pqp4w"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_mhsga"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xfji6"]
-size = Vector2(974, 944)
+size = Vector2(974, 888)
 
 [node name="Camera2D" type="Camera2D"]
 script = ExtResource("1_f1cf7")
@@ -23,7 +25,7 @@ texture = ExtResource("3_mhsga")
 physics_material_override = SubResource("PhysicsMaterial_mhsga")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1, -790)
+position = Vector2(1, -818)
 shape = SubResource("RectangleShape2D_xfji6")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
@@ -60,3 +62,12 @@ modulate = Color(1, 0.6, 0.270588, 1)
 position = Vector2(487, -68)
 scale = Vector2(1.5625, 1.5625)
 texture = ExtResource("4_xfji6")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_x3vey")
+volume_db = -15.0
+autoplay = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="AudioStreamPlayer2D"]
+stream = ExtResource("6_pqp4w")
+volume_db = -10.0
