@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://1ds5d7e4xm4q"]
+
+[node name="TheVoid" type="Area2D"]
+gravity_space_override = 3
+gravity_point_center = Vector2(0, -1)
+gravity_direction = Vector2(0, -1)
+gravity = 300.0
