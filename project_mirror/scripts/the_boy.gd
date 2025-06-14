@@ -28,7 +28,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("right"):
 		velocity.x =  1 * SPEED * delta * 60
 		anim2play = "WalkR"
-	else: if Input.is_action_pressed("left"):
+	elif Input.is_action_pressed("left"):
 		velocity.x = -1 * SPEED * delta * 60
 		anim2play = "WalkL"
 	else:
