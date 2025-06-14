@@ -1,27 +1,16 @@
 [gd_scene load_steps=3 format=3 uid="uid://1ds5d7e4xm4q"]
 
-[sub_resource type="GDScript" id="GDScript_fkder"]
-script/source = "extends Area2D
-
-
-func _on_body_entered(body: Node2D) -> void:
-	print(\"ahif\")
-	body.velocity.y = -980
-
-
-func _on_body_exited(body: Node2D) -> void:
-	body.velocity.y = 980
-"
+[ext_resource type="Script" uid="uid://b4bdm5s3k6uxm" path="res://scripts/the_void.gd" id="1_g703r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fkder"]
-size = Vector2(432, 389)
+size = Vector2(1653, 88)
 
 [node name="TheVoid" type="Area2D"]
-collision_layer = 2
-script = SubResource("GDScript_fkder")
+collision_mask = 2
+script = ExtResource("1_g703r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 0)
+position = Vector2(5, -2)
 shape = SubResource("RectangleShape2D_fkder")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
