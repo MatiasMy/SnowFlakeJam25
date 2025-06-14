@@ -18,6 +18,7 @@ func beplane() -> void:
 	timer.start()
 
 func _physics_process(delta: float) -> void:
+	
 	if !isplane:
 		if not is_on_floor():
 			velocity += get_gravity() * delta
@@ -49,10 +50,22 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 		if !is_on_floor():
 			anim2play = "Jump"
-	if isplane:
-		print("olen leno kone")
-		anim2play = "IdleP"
 			
+	if isplane:
+		anim2play = "IdleP"
+		if Input.is_action_pressed("uparrow"):
+			velocity.y =  -1 * 100 * delta * 60
+			anim2play = "Fly"
+		if Input.is_action_pressed("downarrow"):
+			velocity.y =  1 * 100 * delta * 60
+			anim2play = "Fly"
+		if Input.is_action_pressed("rightarrow"):
+			velocity.x =  1 * 100 * delta * 60
+			anim2play = "Fly"
+		if Input.is_action_pressed("leftarrow"):
+			velocity.x =  -1 * 100 * delta * 60
+			anim2play = "Fly"
+		move_and_slide()
 	if animatedSprite2d.animation != anim2play:
 		animatedSprite2d.play(anim2play)
 	animatedSprite2d.play(anim2play)
