@@ -14,8 +14,10 @@ size = Vector2(24, 22)
 script = ExtResource("1_c4s5g")
 
 [node name="RealSprite" type="RigidBody2D" parent="."]
-position = Vector2(112, 38)
+position = Vector2(-132, 1)
 collision_layer = 5
+collision_mask = 128
+gravity_scale = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RealSprite"]
 shape = SubResource("RectangleShape2D_bt48g")
@@ -24,8 +26,11 @@ shape = SubResource("RectangleShape2D_bt48g")
 position = Vector2(2, 2)
 texture = ExtResource("2_cfj3t")
 
-[node name="ImaginarySprite" type="RigidBody2D" parent="."]
-position = Vector2(334, 38)
+[node name="ImaginarySprite" type="RigidBody2D" parent="." groups=["Breakable"]]
+position = Vector2(129, 0)
+collision_layer = 129
+collision_mask = 128
+gravity_scale = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ImaginarySprite"]
 position = Vector2(1, 0)

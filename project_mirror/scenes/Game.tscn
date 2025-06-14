@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://drjijqr5tc8ne"]
+[gd_scene load_steps=17 format=3 uid="uid://drjijqr5tc8ne"]
 
 [ext_resource type="Script" uid="uid://cs2vc85hv5ts5" path="res://Scripts/game.gd" id="1_bf53h"]
 [ext_resource type="PackedScene" uid="uid://i5br82scl3wh" path="res://Scenes/mirrored_boy.tscn" id="1_qbsmt"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://hg1hrpwf4hpy" path="res://Scenes/platform.tscn" id="7_fgofq"]
 [ext_resource type="PackedScene" uid="uid://d4birtvl8xgk" path="res://Scenes/UI.tscn" id="10_71axn"]
 [ext_resource type="PackedScene" uid="uid://bhtsggyj0a13w" path="res://Scenes/exit_void.tscn" id="11_dahhg"]
+[ext_resource type="PackedScene" uid="uid://ctbyx1xfvgg2f" path="res://Scenes/LinkedBreakableBlock.tscn" id="12_3so38"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aug50"]
 texture = ExtResource("1_s0nni")
@@ -317,5 +318,25 @@ position = Vector2(9, -7261)
 
 [node name="TheVoid2" parent="." instance=ExtResource("6_7lihs")]
 position = Vector2(-6, -7062)
+
+[node name="LinkedBreakableBlock" parent="." instance=ExtResource("12_3so38")]
+position = Vector2(0, -3880)
+scale = Vector2(2.14, 2.14)
+
+[node name="LinkedBreakableBlock2" parent="." instance=ExtResource("12_3so38")]
+position = Vector2(-1, -3879)
+scale = Vector2(1.815, 1.815)
+
+[node name="LinkedBreakableBlock3" parent="." instance=ExtResource("12_3so38")]
+position = Vector2(0, -3886)
+scale = Vector2(1.535, 1.535)
+
+[node name="LinkedBreakableBlock4" parent="." instance=ExtResource("12_3so38")]
+position = Vector2(1, -3884)
+scale = Vector2(1.33, 1.33)
+
+[node name="LinkedBreakableBlock5" parent="." instance=ExtResource("12_3so38")]
+position = Vector2(-9.53674e-07, -3876)
+scale = Vector2(1.15, 1.15)
 
 [connection signal="body_entered" from="TheVoid" to="." method="_on_the_void_body_entered"]

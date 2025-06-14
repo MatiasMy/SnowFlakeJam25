@@ -4,7 +4,7 @@ class_name mirroredboy
 const SPEED = 300.0
 const JUMP_VELOCITY = -500.0
 const DOUBLE_JUMP_VELOCITY = -400.0
-var isplane: bool = true
+var isplane: bool = false
 var canjump = true
 
 @onready var timer: Timer = $Timer
