@@ -7,7 +7,7 @@
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_mhsga"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xfji6"]
-size = Vector2(974, 944)
+size = Vector2(974, 884)
 
 [node name="Camera2D" type="Camera2D"]
 script = ExtResource("1_f1cf7")
@@ -22,7 +22,7 @@ texture = ExtResource("3_mhsga")
 physics_material_override = SubResource("PhysicsMaterial_mhsga")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1, -790)
+position = Vector2(1, -820)
 shape = SubResource("RectangleShape2D_xfji6")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
