@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://x1o5nc85gyay"]
+
+[ext_resource type="Texture2D" uid="uid://berp0cbsdghsu" path="res://Assets/tempcharacter1.png" id="1_2qo34"]
+[ext_resource type="Script" uid="uid://d0t6plha4oklx" path="res://scripts/coin.gd" id="1_jgi06"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jgi06"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2qo34")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g537i"]
+radius = 15.0333
+
+[node name="coin" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_jgi06")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_jgi06")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_g537i")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
