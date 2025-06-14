@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://ctbyx1xfvgg2f"]
+
+[ext_resource type="Script" uid="uid://c2xptv10j05qh" path="res://Scripts/linked_breakable_block.gd" id="1_c4s5g"]
+[ext_resource type="Texture2D" uid="uid://ct2kowfvvm25e" path="res://Assets/Textures/PMans/Maurice.png" id="2_cfj3t"]
+[ext_resource type="Texture2D" uid="uid://uj8rdtueynbf" path="res://Assets/Textures/PMans/John.png" id="3_hrnfa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bt48g"]
+size = Vector2(24, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wdmaw"]
+size = Vector2(24, 22)
+
+[node name="LinkedBreakableBlock" type="Node2D"]
+script = ExtResource("1_c4s5g")
+
+[node name="RealSprite" type="RigidBody2D" parent="."]
+position = Vector2(112, 38)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RealSprite"]
+shape = SubResource("RectangleShape2D_bt48g")
+
+[node name="Sprite2D" type="Sprite2D" parent="RealSprite"]
+position = Vector2(2, 2)
+texture = ExtResource("2_cfj3t")
+
+[node name="ImaginarySprite" type="RigidBody2D" parent="."]
+position = Vector2(334, 38)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ImaginarySprite"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_wdmaw")
+
+[node name="Sprite2D" type="Sprite2D" parent="ImaginarySprite"]
+position = Vector2(1, 2)
+texture = ExtResource("3_hrnfa")
+
+[connection signal="body_entered" from="ImaginarySprite" to="." method="_on_imaginary_sprite_body_entered"]
