@@ -18,6 +18,7 @@ animations = [{
 radius = 15.0
 
 [node name="MirroredBoy" type="CharacterBody2D"]
+collision_layer = 2
 script = ExtResource("1_2t2h8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
