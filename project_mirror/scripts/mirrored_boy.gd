@@ -4,7 +4,7 @@ class_name mirroredboy
 const SPEED = 300.0
 const JUMP_VELOCITY = -500.0
 const DOUBLE_JUMP_VELOCITY = -400.0
-var isplane: bool = false
+var isplane: bool = true
 var canjump = true
 
 @onready var timer: Timer = $Timer
@@ -54,17 +54,21 @@ func _physics_process(delta: float) -> void:
 	if isplane:
 		anim2play = "IdleP"
 		if Input.is_action_pressed("uparrow"):
-			velocity.y =  -1 * 100 * delta * 60
+			velocity.y =  -1 * 150 * delta * 60
 			anim2play = "Fly"
-		if Input.is_action_pressed("downarrow"):
-			velocity.y =  1 * 100 * delta * 60
+		elif Input.is_action_pressed("downarrow"):
+			velocity.y =  1 * 150 * delta * 60
 			anim2play = "Fly"
-		if Input.is_action_pressed("rightarrow"):
-			velocity.x =  1 * 100 * delta * 60
+		elif Input.is_action_pressed("rightarrow"):
+			velocity.x =  1 * 150 * delta * 60
 			anim2play = "Fly"
-		if Input.is_action_pressed("leftarrow"):
-			velocity.x =  -1 * 100 * delta * 60
+		elif Input.is_action_pressed("leftarrow"):
+			velocity.x =  -1 * 150 * delta * 60
 			anim2play = "Fly"
+		else :
+			velocity.x = 0
+			velocity.y = 0
+		
 		move_and_slide()
 	if animatedSprite2d.animation != anim2play:
 		animatedSprite2d.play(anim2play)
