@@ -4,7 +4,7 @@ class_name mirroredboy
 const SPEED = 300.0
 const JUMP_VELOCITY = -500.0
 const DOUBLE_JUMP_VELOCITY = -400.0
-var isplane: bool = false
+var isplane: bool = true
 var canjump = true
 
 @onready var timer: Timer = $Timer
@@ -16,6 +16,8 @@ var anim2play: String = "Idle"
 
 func beplane() -> void:
 	timer.start()
+func beother() -> void:
+	isplane = false
 
 func _physics_process(delta: float) -> void:
 	
