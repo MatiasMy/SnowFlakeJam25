@@ -37,7 +37,8 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	if !is_on_floor():
 		anim2play = "Jump"
-	print(animatedSprite2d.animation)
 	if animatedSprite2d.animation != anim2play:
 		animatedSprite2d.play(anim2play)
 	animatedSprite2d.play(anim2play)
+	
+	

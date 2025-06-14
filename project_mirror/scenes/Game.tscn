@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://drjijqr5tc8ne"]
+[gd_scene load_steps=10 format=3 uid="uid://drjijqr5tc8ne"]
 
 [ext_resource type="PackedScene" uid="uid://i5br82scl3wh" path="res://Scenes/mirrored_boy.tscn" id="1_qbsmt"]
 [ext_resource type="Texture2D" uid="uid://cmlr3isek35ir" path="res://Assets/Textures/TileMap.png" id="1_s0nni"]
 [ext_resource type="Texture2D" uid="uid://8m6qc3mp1ge7" path="res://Assets/Textures/TileMap2.png" id="2_b2bpf"]
 [ext_resource type="PackedScene" uid="uid://da3oxre7ja4qi" path="res://Scenes/the_boy.tscn" id="2_cpr0p"]
 [ext_resource type="PackedScene" uid="uid://c2bx1o6rt0gki" path="res://Scenes/camera.tscn" id="2_kldst"]
+[ext_resource type="PackedScene" uid="uid://1ds5d7e4xm4q" path="res://Scenes/the_void.tscn" id="6_7lihs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aug50"]
 texture = ExtResource("1_s0nni")
@@ -115,3 +116,9 @@ position = Vector2(302, -23)
 
 [node name="TheBoy" parent="." instance=ExtResource("2_cpr0p")]
 position = Vector2(-293, -28)
+
+[node name="TheVoid" parent="." instance=ExtResource("6_7lihs")]
+position = Vector2(256, -3374)
+
+[node name="TheVoid2" parent="." instance=ExtResource("6_7lihs")]
+position = Vector2(-256, -3369)
