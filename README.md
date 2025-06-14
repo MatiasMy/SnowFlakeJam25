@@ -12,3 +12,7 @@ pulling from github with git bash:
 git pull origin main
 
 	Thanks for the useful information!
+
+git rollback shit push:
+
+git revert -m 1 HEAD~3..HEAD
