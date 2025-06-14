@@ -1,7 +1,24 @@
-[gd_scene load_steps=21 format=3 uid="uid://i5br82scl3wh"]
+[gd_scene load_steps=27 format=3 uid="uid://i5br82scl3wh"]
 
 [ext_resource type="Script" uid="uid://c43087xks6gn8" path="res://Scripts/mirrored_boy.gd" id="1_2t2h8"]
+[ext_resource type="Texture2D" uid="uid://deg8e73h6lral" path="res://Assets/Textures/Plane.png" id="2_akbwx"]
 [ext_resource type="Texture2D" uid="uid://dkfgxvuopnw3" path="res://Assets/Textures/BoyCyborg.png" id="2_cpjwj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_57vs5"]
+atlas = ExtResource("2_akbwx")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1uoqs"]
+atlas = ExtResource("2_akbwx")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m1b41"]
+atlas = ExtResource("2_akbwx")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aqt11"]
+atlas = ExtResource("2_akbwx")
+region = Rect2(0, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_akbwx"]
 atlas = ExtResource("2_cpjwj")
@@ -18,6 +35,10 @@ region = Rect2(64, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_1nhnw"]
 atlas = ExtResource("2_cpjwj")
 region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2160j"]
+atlas = ExtResource("2_akbwx")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m1lf0"]
 atlas = ExtResource("2_cpjwj")
@@ -71,6 +92,23 @@ region = Rect2(96, 32, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_57vs5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1uoqs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m1b41")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aqt11")
+}],
+"loop": true,
+"name": &"Fly",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_akbwx")
 }, {
 "duration": 1.0,
@@ -83,7 +121,15 @@ animations = [{
 "texture": SubResource("AtlasTexture_1nhnw")
 }],
 "loop": true,
-"name": &"Ilde",
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2160j")
+}],
+"loop": true,
+"name": &"IdleP",
 "speed": 5.0
 }, {
 "frames": [{
@@ -141,15 +187,22 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_42tfi"]
 radius = 15.0
 
-[node name="MirroredBoy" type="CharacterBody2D" groups=["Player"]]
+[node name="MirroredBoy" type="CharacterBody2D" node_paths=PackedStringArray("animatedSprite2d") groups=["Player"]]
 z_index = 3
 collision_layer = 2
 script = ExtResource("1_2t2h8")
+animatedSprite2d = NodePath("AnimatedSprite2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_57vs5")
-animation = &"Ilde"
+animation = &"IdleP"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 light_mask = 2
 shape = SubResource("CircleShape2D_42tfi")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.6
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
