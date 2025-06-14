@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://ctbyx1xfvgg2f"]
+[gd_scene load_steps=5 format=3 uid="uid://ctbyx1xfvgg2f"]
 
 [ext_resource type="Script" uid="uid://c2xptv10j05qh" path="res://Scripts/linked_breakable_block.gd" id="1_c4s5g"]
-[ext_resource type="Texture2D" uid="uid://ct2kowfvvm25e" path="res://Assets/Textures/PMans/Maurice.png" id="2_cfj3t"]
-[ext_resource type="Texture2D" uid="uid://uj8rdtueynbf" path="res://Assets/Textures/PMans/John.png" id="3_hrnfa"]
+[ext_resource type="Texture2D" uid="uid://dseesnf71cwmy" path="res://Assets/Textures/LinkedBlocks.png" id="2_2n65q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bt48g"]
 size = Vector2(24, 22)
@@ -11,11 +10,10 @@ size = Vector2(24, 22)
 size = Vector2(24, 22)
 
 [node name="LinkedBreakableBlock" type="Node2D"]
-position = Vector2(-1, 1)
 script = ExtResource("1_c4s5g")
 
 [node name="RealSprite" type="RigidBody2D" parent="."]
-position = Vector2(-132, 1)
+position = Vector2(-197, 0)
 collision_layer = 5
 collision_mask = 128
 gravity_scale = 0.0
@@ -25,10 +23,12 @@ shape = SubResource("RectangleShape2D_bt48g")
 
 [node name="Sprite2D" type="Sprite2D" parent="RealSprite"]
 position = Vector2(2, 2)
-texture = ExtResource("2_cfj3t")
+texture = ExtResource("2_2n65q")
+vframes = 2
+frame = 1
 
 [node name="ImaginarySprite" type="RigidBody2D" parent="." groups=["Breakable"]]
-position = Vector2(129, 0)
+position = Vector2(195, 0)
 collision_layer = 129
 collision_mask = 128
 gravity_scale = 0.0
@@ -39,6 +39,7 @@ shape = SubResource("RectangleShape2D_wdmaw")
 
 [node name="Sprite2D" type="Sprite2D" parent="ImaginarySprite"]
 position = Vector2(1, 2)
-texture = ExtResource("3_hrnfa")
+texture = ExtResource("2_2n65q")
+vframes = 2
 
 [connection signal="body_entered" from="ImaginarySprite" to="." method="_on_imaginary_sprite_body_entered"]
