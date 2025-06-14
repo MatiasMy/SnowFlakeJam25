@@ -11,6 +11,7 @@ size = Vector2(24, 22)
 size = Vector2(24, 22)
 
 [node name="LinkedBreakableBlock" type="Node2D"]
+position = Vector2(-1, 1)
 script = ExtResource("1_c4s5g")
 
 [node name="RealSprite" type="RigidBody2D" parent="."]
