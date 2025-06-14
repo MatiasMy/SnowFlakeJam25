@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d240lb68037xc"
+path="res://.godot/imported/Gamejam (kuolit(elioothuono)).mp3-b25726c3b0783d0e821a778d1cc88e51.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/Gamejam (kuolit(elioothuono)).mp3"
+dest_files=["res://.godot/imported/Gamejam (kuolit(elioothuono)).mp3-b25726c3b0783d0e821a778d1cc88e51.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://miyxkbaarige"
+path="res://.godot/imported/Gamejam (hyppy).mp3-793641f13a5c9fe564dcfa6efc06fa4a.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/Gamejam (hyppy).mp3"
+dest_files=["res://.godot/imported/Gamejam (hyppy).mp3-793641f13a5c9fe564dcfa6efc06fa4a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

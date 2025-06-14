@@ -11,6 +11,7 @@ var canjump: bool = true
 var double_jump: bool = true
 var anim2play: String = "Idle"
 @export var animatedSprite2d: AnimatedSprite2D
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -24,10 +25,12 @@ func _physics_process(delta: float) -> void:
 	if (is_on_floor() == false) and canjump and timer.is_stopped():
 		timer.start()
 	if Input.is_action_just_pressed("up") && !is_on_floor() && double_jump && !canjump:
+		audio_stream_player_2d.play()
 		velocity.y = DOUBLE_JUMP_VELOCITY
 		double_jump = false;
 	# Handle jump.
 	if Input.is_action_just_pressed("up") && canjump:
+		audio_stream_player_2d.play()
 		velocity.y = JUMP_VELOCITY
 		canjump = false
 		
