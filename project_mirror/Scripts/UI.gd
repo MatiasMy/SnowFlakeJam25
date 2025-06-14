@@ -25,6 +25,3 @@ func updateHighScore(newScore: int) -> void:
 		highScore.text = ("High Score: " + str(newScore))
 		hScore = newScore
 	pass
-
-func getHighScore() -> float:
-	return hScore

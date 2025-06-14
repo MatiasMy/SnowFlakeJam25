@@ -1,5 +1,4 @@
 [gd_scene load_steps=16 format=3 uid="uid://drjijqr5tc8ne"]
-[gd_scene load_steps=16 format=3 uid="uid://drjijqr5tc8ne"]
 
 [ext_resource type="Script" uid="uid://cs2vc85hv5ts5" path="res://Scripts/game.gd" id="1_bf53h"]
 [ext_resource type="PackedScene" uid="uid://i5br82scl3wh" path="res://Scenes/mirrored_boy.tscn" id="1_qbsmt"]
@@ -12,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://hg1hrpwf4hpy" path="res://Scenes/platform.tscn" id="7_fgofq"]
 [ext_resource type="PackedScene" uid="uid://d4birtvl8xgk" path="res://Scenes/UI.tscn" id="10_71axn"]
 [ext_resource type="PackedScene" uid="uid://bmpqmxngnf7m3" path="res://Scenes/exit_void.tscn" id="11_dahhg"]
-[ext_resource type="Script" uid="uid://cd5j7qd3uyqo8" path="res://Scenes/saveables.gd" id="11_dahhg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aug50"]
 texture = ExtResource("1_s0nni")
@@ -227,8 +225,7 @@ position = Vector2(431, -3486)
 [node name="platform28" parent="latforms" instance=ExtResource("7_fgofq")]
 position = Vector2(463, -3486)
 
-[node name="Saveables" type="Node" parent="." groups=["Persist"]]
-script = ExtResource("11_dahhg")
+[node name="Node2D" type="Node2D" parent="."]
 
 [node name="TheVoid2" parent="." instance=ExtResource("6_7lihs")]
 position = Vector2(-14, -7104)
