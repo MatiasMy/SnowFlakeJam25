@@ -25,6 +25,9 @@ func beplane() -> void:
 func beother() -> void:
 	isplane = false
 	issuperboyd = true
+func benormal() -> void:
+	isplane = false
+	issuperboyd = false
 
 func _physics_process(delta: float) -> void:
 	

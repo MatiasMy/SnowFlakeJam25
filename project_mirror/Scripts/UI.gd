@@ -21,7 +21,9 @@ func updateScore(newScore: int) -> void:
 	pass
 	
 func updateHighScore(newScore: int) -> void:
-	if hScore < newScore:
+	if HighScore.score < newScore:
 		highScore.text = ("High Score: " + str(newScore))
-		hScore = newScore
+		HighScore.score = newScore
+	else :
+		highScore.text = ("High Score: " + str(HighScore.score))
 	pass
