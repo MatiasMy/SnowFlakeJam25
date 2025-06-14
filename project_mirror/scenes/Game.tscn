@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://drjijqr5tc8ne"]
 
-[ext_resource type="Script" uid="uid://cs2vc85hv5ts5" path="res://scripts/game.gd" id="1_bf53h"]
+[ext_resource type="Script" uid="uid://cs2vc85hv5ts5" path="res://Scripts/game.gd" id="1_bf53h"]
 [ext_resource type="PackedScene" uid="uid://i5br82scl3wh" path="res://Scenes/mirrored_boy.tscn" id="1_qbsmt"]
 [ext_resource type="Texture2D" uid="uid://cmlr3isek35ir" path="res://Assets/Textures/TileMap.png" id="1_s0nni"]
 [ext_resource type="Texture2D" uid="uid://8m6qc3mp1ge7" path="res://Assets/Textures/TileMap2.png" id="2_b2bpf"]
@@ -130,88 +130,90 @@ position = Vector2(-293, -28)
 [node name="TheVoid" parent="." instance=ExtResource("6_7lihs")]
 position = Vector2(2, -3319)
 
-[node name="platform" parent="." instance=ExtResource("7_fgofq")]
+[node name="latforms" type="Node2D" parent="."]
+
+[node name="platform" parent="latforms" instance=ExtResource("7_fgofq")]
 position = Vector2(-466, -3486)
 
-[node name="platform2" parent="." instance=ExtResource("7_fgofq")]
+[node name="platform2" parent="latforms" instance=ExtResource("7_fgofq")]
 position = Vector2(-434, -3486)
 
-[node name="platform3" parent="." instance=ExtResource("7_fgofq")]
+[node name="platform3" parent="latforms" instance=ExtResource("7_fgofq")]
 position = Vector2(-402, -3486)
 
-[node name="platform4" parent="." instance=ExtResource("7_fgofq")]
+[node name="platform4" parent="latforms" instance=ExtResource("7_fgofq")]
 position = Vector2(-370, -3486)
 
-[node name="platform5" parent="." instance=ExtResource("7_fgofq")]
+[node name="platform5" parent="latforms" instance=ExtResource("7_fgofq")]
 position = Vector2(-338, -3486)
 
-[node name="platform6" parent="." instance=ExtResource("7_fgofq")]
+[node name="platform6" parent="latforms" instance=ExtResource("7_fgofq")]
 position = Vector2(-306, -3486)
 
-[node name="platform7" parent="." instance=ExtResource("7_fgofq")]
+[node name="platform7" parent="latforms" instance=ExtResource("7_fgofq")]
 position = Vector2(-274, -3486)
 
-[node name="platform8" parent="." instance=ExtResource("7_fgofq")]
+[node name="platform8" parent="latforms" instance=ExtResource("7_fgofq")]
 position = Vector2(-242, -3486)
 
-[node name="platform9" parent="." instance=ExtResource("7_fgofq")]
+[node name="platform9" parent="latforms" instance=ExtResource("7_fgofq")]
 position = Vector2(-210, -3486)
 
-[node name="platform10" parent="." instance=ExtResource("7_fgofq")]
+[node name="platform10" parent="latforms" instance=ExtResource("7_fgofq")]
 position = Vector2(-178, -3486)
 
-[node name="platform11" parent="." instance=ExtResource("7_fgofq")]
+[node name="platform11" parent="latforms" instance=ExtResource("7_fgofq")]
 position = Vector2(-146, -3486)
 
-[node name="platform12" parent="." instance=ExtResource("7_fgofq")]
+[node name="platform12" parent="latforms" instance=ExtResource("7_fgofq")]
 position = Vector2(-114, -3486)
 
-[node name="platform13" parent="." instance=ExtResource("7_fgofq")]
+[node name="platform13" parent="latforms" instance=ExtResource("7_fgofq")]
 position = Vector2(-82, -3486)
 
-[node name="platform14" parent="." instance=ExtResource("7_fgofq")]
+[node name="platform14" parent="latforms" instance=ExtResource("7_fgofq")]
 position = Vector2(-50, -3486)
 
-[node name="platform15" parent="." instance=ExtResource("7_fgofq")]
+[node name="platform15" parent="latforms" instance=ExtResource("7_fgofq")]
 position = Vector2(47, -3486)
 
-[node name="platform16" parent="." instance=ExtResource("7_fgofq")]
+[node name="platform16" parent="latforms" instance=ExtResource("7_fgofq")]
 position = Vector2(79, -3486)
 
-[node name="platform17" parent="." instance=ExtResource("7_fgofq")]
+[node name="platform17" parent="latforms" instance=ExtResource("7_fgofq")]
 position = Vector2(111, -3486)
 
-[node name="platform18" parent="." instance=ExtResource("7_fgofq")]
+[node name="platform18" parent="latforms" instance=ExtResource("7_fgofq")]
 position = Vector2(143, -3486)
 
-[node name="platform19" parent="." instance=ExtResource("7_fgofq")]
+[node name="platform19" parent="latforms" instance=ExtResource("7_fgofq")]
 position = Vector2(175, -3486)
 
-[node name="platform20" parent="." instance=ExtResource("7_fgofq")]
+[node name="platform20" parent="latforms" instance=ExtResource("7_fgofq")]
 position = Vector2(207, -3486)
 
-[node name="platform21" parent="." instance=ExtResource("7_fgofq")]
+[node name="platform21" parent="latforms" instance=ExtResource("7_fgofq")]
 position = Vector2(239, -3486)
 
-[node name="platform22" parent="." instance=ExtResource("7_fgofq")]
+[node name="platform22" parent="latforms" instance=ExtResource("7_fgofq")]
 position = Vector2(271, -3486)
 
-[node name="platform23" parent="." instance=ExtResource("7_fgofq")]
+[node name="platform23" parent="latforms" instance=ExtResource("7_fgofq")]
 position = Vector2(303, -3486)
 
-[node name="platform24" parent="." instance=ExtResource("7_fgofq")]
+[node name="platform24" parent="latforms" instance=ExtResource("7_fgofq")]
 position = Vector2(335, -3486)
 
-[node name="platform25" parent="." instance=ExtResource("7_fgofq")]
+[node name="platform25" parent="latforms" instance=ExtResource("7_fgofq")]
 position = Vector2(367, -3486)
 
-[node name="platform26" parent="." instance=ExtResource("7_fgofq")]
+[node name="platform26" parent="latforms" instance=ExtResource("7_fgofq")]
 position = Vector2(399, -3486)
 
-[node name="platform27" parent="." instance=ExtResource("7_fgofq")]
+[node name="platform27" parent="latforms" instance=ExtResource("7_fgofq")]
 position = Vector2(431, -3486)
 
-[node name="platform28" parent="." instance=ExtResource("7_fgofq")]
+[node name="platform28" parent="latforms" instance=ExtResource("7_fgofq")]
 position = Vector2(463, -3486)
 
 [connection signal="body_entered" from="TheVoid" to="." method="_on_the_void_body_entered"]
