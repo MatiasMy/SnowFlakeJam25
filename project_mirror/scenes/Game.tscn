@@ -127,6 +127,7 @@ offset_left = -482.0
 offset_top = -317.0
 offset_right = -482.0
 offset_bottom = -317.0
+metadata/_edit_use_anchors_ = true
 
 [node name="MirroredBoy" parent="." instance=ExtResource("1_qbsmt")]
 position = Vector2(302, -23)
@@ -222,5 +223,7 @@ position = Vector2(431, -3486)
 
 [node name="platform28" parent="latforms" instance=ExtResource("7_fgofq")]
 position = Vector2(463, -3486)
+
+[node name="Node2D" type="Node2D" parent="."]
 
 [connection signal="body_entered" from="TheVoid" to="." method="_on_the_void_body_entered"]
