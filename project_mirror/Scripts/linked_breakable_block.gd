@@ -1,4 +1,4 @@
-extends Node2D
+class_name LinkeBreakable extends Node2D
 
 
 @onready var real = $RealSprite

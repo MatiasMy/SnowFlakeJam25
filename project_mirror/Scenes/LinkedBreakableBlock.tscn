@@ -15,6 +15,7 @@ script = ExtResource("1_c4s5g")
 
 [node name="RealSprite" type="RigidBody2D" parent="."]
 position = Vector2(112, 38)
+collision_layer = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RealSprite"]
 shape = SubResource("RectangleShape2D_bt48g")
