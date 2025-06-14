@@ -11,8 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://hg1hrpwf4hpy" path="res://Scenes/platform.tscn" id="7_fgofq"]
 [ext_resource type="PackedScene" uid="uid://d4birtvl8xgk" path="res://Scenes/UI.tscn" id="10_71axn"]
 [ext_resource type="PackedScene" uid="uid://bhtsggyj0a13w" path="res://Scenes/exit_void.tscn" id="11_dahhg"]
-[ext_resource type="PackedScene" uid="uid://b7ie756sxbfke" path="res://Scenes/coin.tscn" id="13_3cx6b"]
-[ext_resource type="PackedScene" uid="uid://xnxichsycp64" path="res://Scenes/LinkedBlock2x1.tscn" id="13_wxwew"]
+[ext_resource type="PackedScene" uid="uid://ctbyx1xfvgg2f" path="res://Scenes/LinkedBreakableBlock.tscn" id="12_3so38"]
+[ext_resource type="PackedScene" uid="uid://x1o5nc85gyay" path="res://Scenes/coin.tscn" id="13_3cx6b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aug50"]
 texture = ExtResource("1_s0nni")
@@ -320,39 +320,45 @@ position = Vector2(-672, -7270)
 [node name="TheVoid2" parent="." instance=ExtResource("6_7lihs")]
 position = Vector2(-6, -7062)
 
-[node name="Coins" type="Node2D" parent="."]
+[node name="LinkedBreakableBlock" parent="." instance=ExtResource("12_3so38")]
+position = Vector2(0, -3880)
+scale = Vector2(2.14, 2.14)
 
-[node name="coin" parent="Coins" instance=ExtResource("13_3cx6b")]
+[node name="LinkedBreakableBlock2" parent="." instance=ExtResource("12_3so38")]
+position = Vector2(-1, -3879)
+scale = Vector2(1.815, 1.815)
+
+[node name="LinkedBreakableBlock3" parent="." instance=ExtResource("12_3so38")]
+position = Vector2(0, -3886)
+scale = Vector2(1.535, 1.535)
+
+[node name="LinkedBreakableBlock4" parent="." instance=ExtResource("12_3so38")]
+position = Vector2(1, -3884)
+scale = Vector2(1.33, 1.33)
+
+[node name="LinkedBreakableBlock5" parent="." instance=ExtResource("12_3so38")]
+position = Vector2(-9.53674e-07, -3876)
+scale = Vector2(1.15, 1.15)
+
+[node name="coin" parent="." instance=ExtResource("13_3cx6b")]
 position = Vector2(-307, -1238)
 
-[node name="coin2" parent="Coins" instance=ExtResource("13_3cx6b")]
+[node name="coin2" parent="." instance=ExtResource("13_3cx6b")]
 position = Vector2(409, -1771)
 
-[node name="coin3" parent="Coins" instance=ExtResource("13_3cx6b")]
+[node name="coin3" parent="." instance=ExtResource("13_3cx6b")]
 position = Vector2(-465, -2598)
 
-[node name="coin4" parent="Coins" instance=ExtResource("13_3cx6b")]
+[node name="coin4" parent="." instance=ExtResource("13_3cx6b")]
 position = Vector2(-448, -4607)
 
-[node name="coin5" parent="Coins" instance=ExtResource("13_3cx6b")]
+[node name="coin5" parent="." instance=ExtResource("13_3cx6b")]
 position = Vector2(-116, -5170)
 
-[node name="coin6" parent="Coins" instance=ExtResource("13_3cx6b")]
+[node name="coin6" parent="." instance=ExtResource("13_3cx6b")]
 position = Vector2(102, -6089)
 
-[node name="coin7" parent="Coins" instance=ExtResource("13_3cx6b")]
+[node name="coin7" parent="." instance=ExtResource("13_3cx6b")]
 position = Vector2(-400, -8752)
-
-[node name="LinkedBlock3x1" parent="." instance=ExtResource("13_wxwew")]
-position = Vector2(-2, -5104)
-scale = Vector2(0.36, 0.36)
-
-[node name="LinkedBlock3x2" parent="." instance=ExtResource("13_wxwew")]
-position = Vector2(1, -5971)
-scale = Vector2(0.445, 0.445)
-
-[node name="LinkedBlock3x3" parent="." instance=ExtResource("13_wxwew")]
-position = Vector2(0, -5477)
-scale = Vector2(1.135, 1.135)
 
 [connection signal="body_entered" from="TheVoid" to="." method="_on_the_void_body_entered"]

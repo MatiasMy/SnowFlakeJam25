@@ -8,22 +8,10 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_g537i")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_h2p6v")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ffmqm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_81h6x")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qbp07")
+"texture": ExtResource("1_2qo34")
 }],
 "loop": true,
-"name": &"Idle",
+"name": &"default",
 "speed": 5.0
 }]
 
@@ -36,7 +24,6 @@ script = ExtResource("1_jgi06")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_jgi06")
-animation = &"Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_g537i")
