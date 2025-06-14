@@ -1,7 +1,7 @@
 class_name Game extends Node2D
 
 @onready var ui: UI = $Camera2D/Ui
-@onready var savebles = $Saveables
+@onready var saveables = $Saveables
 var score: float
 
 func _ready() -> void:

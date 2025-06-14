@@ -1,7 +1,7 @@
 extends Area2D
 
 @onready var timer: Timer = $Timer
-@onready var saveNodes = get_tree().get_nodes_in_group("Persist")
+@onready var saveables: Saveables = $Saveables
 func _on_body_entered(body) -> void:
 	print("death time")
 	timer.start()
