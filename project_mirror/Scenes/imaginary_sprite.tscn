@@ -7,7 +7,7 @@ size = Vector2(32, 32)
 
 [node name="ImaginarySprite" type="RigidBody2D" groups=["Breakable"]]
 collision_layer = 129
-collision_mask = 128
+collision_mask = 129
 gravity_scale = 0.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
