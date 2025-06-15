@@ -9,8 +9,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pathFollower.progress += 100*delta
-	print()
-	if global_position.x > 480:
+	if global_position.x > 0:
 		play("Plane")
 	else:
 		play("Bird")

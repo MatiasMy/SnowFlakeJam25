@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://drjijqr5tc8ne"]
+[gd_scene load_steps=22 format=3 uid="uid://drjijqr5tc8ne"]
 
 [ext_resource type="Script" uid="uid://cs2vc85hv5ts5" path="res://Scripts/game.gd" id="1_bf53h"]
 [ext_resource type="PackedScene" uid="uid://i5br82scl3wh" path="res://Scenes/mirrored_boy.tscn" id="1_qbsmt"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://drsqyfx3yvqim" path="res://Scenes/exit_void_2.tscn" id="14_wxwew"]
 [ext_resource type="PackedScene" uid="uid://c1vq3bmvkra0a" path="res://Scenes/LinkedBreakableBlock3.tscn" id="15_alh3a"]
 [ext_resource type="PackedScene" uid="uid://cqpm7rn07k4sx" path="res://Scenes/LinkedBreakableBlock2.tscn" id="16_4q8tf"]
+[ext_resource type="PackedScene" uid="uid://dk7m822mpx3u1" path="res://Scenes/FlyingThing.tscn" id="17_4q8tf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aug50"]
 texture = ExtResource("1_s0nni")
@@ -119,6 +120,37 @@ sources/2 = SubResource("TileSetAtlasSource_bf53h")
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_bf53h")
+
+[node name="FlyingThings" type="Node2D" parent="."]
+
+[node name="FlyingThing" parent="FlyingThings" instance=ExtResource("17_4q8tf")]
+position = Vector2(-468, -8449)
+
+[node name="FlyingThing2" parent="FlyingThings" instance=ExtResource("17_4q8tf")]
+position = Vector2(-429, -8498)
+
+[node name="FlyingThing3" parent="FlyingThings" instance=ExtResource("17_4q8tf")]
+position = Vector2(-714, -9253)
+rotation = -0.459022
+scale = Vector2(1.33, 1.33)
+
+[node name="FlyingThing4" parent="FlyingThings" instance=ExtResource("17_4q8tf")]
+position = Vector2(-423, -4892)
+
+[node name="FlyingThing5" parent="FlyingThings" instance=ExtResource("17_4q8tf")]
+position = Vector2(-485, -13413)
+
+[node name="FlyingThing6" parent="FlyingThings" instance=ExtResource("17_4q8tf")]
+position = Vector2(-427, -1244)
+
+[node name="FlyingThing7" parent="FlyingThings" instance=ExtResource("17_4q8tf")]
+position = Vector2(-368, -3099)
+
+[node name="FlyingThing8" parent="FlyingThings" instance=ExtResource("17_4q8tf")]
+position = Vector2(-401, -3951)
+
+[node name="FlyingThing9" parent="FlyingThings" instance=ExtResource("17_4q8tf")]
+position = Vector2(-410, -6412)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_kiw3p")
@@ -497,146 +529,14 @@ position = Vector2(-57, -7270)
 [node name="TheVoid2" parent="." instance=ExtResource("6_7lihs")]
 position = Vector2(-6, -7062)
 
-[node name="LinkedBreakableBlock2" parent="." instance=ExtResource("12_3so38")]
-position = Vector2(0, -5105)
-scale = Vector2(0.5, 0.5)
-
-[node name="LinkedBreakableBlock18" parent="." instance=ExtResource("12_3so38")]
-position = Vector2(0, -16020)
-scale = Vector2(1.5, 1.5)
-
-[node name="LinkedBreakableBlock19" parent="." instance=ExtResource("12_3so38")]
-position = Vector2(0, -16020)
-scale = Vector2(1.7, 1.7)
-
-[node name="LinkedBreakableBlock23" parent="." instance=ExtResource("12_3so38")]
-position = Vector2(0, -16707)
-scale = Vector2(2.1, 2.1)
-
-[node name="LinkedBreakableBlock24" parent="." instance=ExtResource("12_3so38")]
-position = Vector2(0, -17322)
-scale = Vector2(0.95, 0.95)
-
-[node name="LinkedBreakableBlock20" parent="." instance=ExtResource("12_3so38")]
-position = Vector2(0, -15694)
-scale = Vector2(1.9, 1.9)
-
-[node name="LinkedBreakableBlock21" parent="." instance=ExtResource("12_3so38")]
-position = Vector2(0, -15694)
-scale = Vector2(2.1, 2.1)
-
-[node name="LinkedBreakableBlock22" parent="." instance=ExtResource("12_3so38")]
-position = Vector2(0, -15694)
-scale = Vector2(2.3, 2.3)
-
-[node name="LinkedBreakableBlock3" parent="." instance=ExtResource("12_3so38")]
-position = Vector2(0, -5101)
-scale = Vector2(0.4, 0.4)
-
-[node name="LinkedBreakableBlock10" parent="." instance=ExtResource("12_3so38")]
-position = Vector2(0, -5473)
-scale = Vector2(1.1, 1.1)
-
-[node name="LinkedBreakableBlock12" parent="." instance=ExtResource("12_3so38")]
-position = Vector2(0, -6772)
-scale = Vector2(1.5, 1.5)
-
-[node name="LinkedBreakableBlock13" parent="." instance=ExtResource("12_3so38")]
-position = Vector2(0, -6814)
-scale = Vector2(1.5, 1.5)
-
-[node name="LinkedBreakableBlock14" parent="." instance=ExtResource("12_3so38")]
-position = Vector2(0, -6856)
-scale = Vector2(1.5, 1.5)
-
-[node name="LinkedBreakableBlock11" parent="." instance=ExtResource("12_3so38")]
-position = Vector2(0, -5473)
-scale = Vector2(0.9, 0.9)
-
-[node name="LinkedBreakableBlock6" parent="." instance=ExtResource("12_3so38")]
-position = Vector2(0, -4255)
-scale = Vector2(1.5, 1.5)
-
-[node name="LinkedBreakableBlock7" parent="." instance=ExtResource("12_3so38")]
-position = Vector2(0, -4255)
-scale = Vector2(1.3, 1.3)
-
-[node name="LinkedBreakableBlock8" parent="." instance=ExtResource("12_3so38")]
-position = Vector2(0, -4255)
-scale = Vector2(1.1, 1.1)
-
-[node name="LinkedBreakableBlock9" parent="." instance=ExtResource("12_3so38")]
-position = Vector2(0, -4255)
-scale = Vector2(0.9, 0.9)
-
-[node name="LinkedBreakableBlock4" parent="." instance=ExtResource("12_3so38")]
-position = Vector2(0, -5103)
-scale = Vector2(0.3, 0.3)
-
-[node name="LinkedBreakableBlock5" parent="." instance=ExtResource("12_3so38")]
-position = Vector2(0, -5101)
-scale = Vector2(0.2, 0.2)
-
-[node name="coin" parent="." instance=ExtResource("13_3cx6b")]
-position = Vector2(-315, -1239)
-
-[node name="coin2" parent="." instance=ExtResource("13_3cx6b")]
-position = Vector2(403, -1759)
-
-[node name="coin3" parent="." instance=ExtResource("13_3cx6b")]
-position = Vector2(467, -2621)
-
-[node name="coin4" parent="." instance=ExtResource("13_3cx6b")]
-position = Vector2(-122, -5152)
-
-[node name="coin5" parent="." instance=ExtResource("13_3cx6b")]
-position = Vector2(-455, -4614)
-
-[node name="coin6" parent="." instance=ExtResource("13_3cx6b")]
-position = Vector2(141, -6071)
-
-[node name="coin7" parent="." instance=ExtResource("13_3cx6b")]
-position = Vector2(-395, -8750)
-
-[node name="coin8" parent="." instance=ExtResource("13_3cx6b")]
-position = Vector2(116, -7988)
-
-[node name="coin9" parent="." instance=ExtResource("13_3cx6b")]
-position = Vector2(-455, -9653)
-
 [node name="TheVoid3" parent="." instance=ExtResource("6_7lihs")]
 position = Vector2(-17, -10735)
 
 [node name="exit_void2" parent="." instance=ExtResource("14_wxwew")]
 position = Vector2(-298, -10912)
 
-[node name="coin10" parent="." instance=ExtResource("13_3cx6b")]
-position = Vector2(465, -11761)
-
-[node name="coin11" parent="." instance=ExtResource("13_3cx6b")]
-position = Vector2(468, -13454)
-
-[node name="coin12" parent="." instance=ExtResource("13_3cx6b")]
-position = Vector2(-466, -12757)
-
 [node name="TheVoid4" parent="." instance=ExtResource("6_7lihs")]
 position = Vector2(-86, -14230)
-
-[node name="LinkedBreakableBlock15" parent="." instance=ExtResource("15_alh3a")]
-position = Vector2(-2, -4204)
-scale = Vector2(1.48, 1.48)
-
-[node name="LinkedBreakableBlock16" parent="." instance=ExtResource("15_alh3a")]
-position = Vector2(0, -5074)
-scale = Vector2(0.37, 0.37)
-
-[node name="LinkedBreakableBlock17" parent="." instance=ExtResource("16_4q8tf")]
-position = Vector2(-1, -5431)
-scale = Vector2(1.105, 1.105)
-
-[node name="LinkedBreakableBlock" parent="." instance=ExtResource("12_3so38")]
-position = Vector2(2, -7323)
-scale = Vector2(2.37, 2.37)
 
 [node name="TheVoid5" parent="." instance=ExtResource("6_7lihs")]
 position = Vector2(-1, -17623)
@@ -728,16 +628,152 @@ position = Vector2(431, -3486)
 [node name="platform28" parent="latforms5" instance=ExtResource("7_fgofq")]
 position = Vector2(463, -3486)
 
-[node name="coin13" parent="." instance=ExtResource("13_3cx6b")]
-position = Vector2(-422, -15741)
-
-[node name="coin14" parent="." instance=ExtResource("13_3cx6b")]
-position = Vector2(48, -16168)
-
-[node name="coin15" parent="." instance=ExtResource("13_3cx6b")]
-position = Vector2(399, -16779)
-
 [node name="exit_void3" parent="." instance=ExtResource("14_wxwew")]
 position = Vector2(-252, -17826)
+
+[node name="LinkedBlocks" type="Node2D" parent="."]
+
+[node name="LinkedBreakableBlock2" parent="LinkedBlocks" instance=ExtResource("12_3so38")]
+position = Vector2(0, -5105)
+scale = Vector2(0.5, 0.5)
+
+[node name="LinkedBreakableBlock18" parent="LinkedBlocks" instance=ExtResource("12_3so38")]
+position = Vector2(0, -16020)
+scale = Vector2(1.5, 1.5)
+
+[node name="LinkedBreakableBlock19" parent="LinkedBlocks" instance=ExtResource("12_3so38")]
+position = Vector2(0, -16020)
+scale = Vector2(1.7, 1.7)
+
+[node name="LinkedBreakableBlock23" parent="LinkedBlocks" instance=ExtResource("12_3so38")]
+position = Vector2(0, -16707)
+scale = Vector2(2.1, 2.1)
+
+[node name="LinkedBreakableBlock24" parent="LinkedBlocks" instance=ExtResource("12_3so38")]
+position = Vector2(0, -17322)
+scale = Vector2(0.95, 0.95)
+
+[node name="LinkedBreakableBlock20" parent="LinkedBlocks" instance=ExtResource("12_3so38")]
+position = Vector2(0, -15694)
+scale = Vector2(1.9, 1.9)
+
+[node name="LinkedBreakableBlock21" parent="LinkedBlocks" instance=ExtResource("12_3so38")]
+position = Vector2(0, -15694)
+scale = Vector2(2.1, 2.1)
+
+[node name="LinkedBreakableBlock22" parent="LinkedBlocks" instance=ExtResource("12_3so38")]
+position = Vector2(0, -15694)
+scale = Vector2(2.3, 2.3)
+
+[node name="LinkedBreakableBlock3" parent="LinkedBlocks" instance=ExtResource("12_3so38")]
+position = Vector2(0, -5101)
+scale = Vector2(0.4, 0.4)
+
+[node name="LinkedBreakableBlock10" parent="LinkedBlocks" instance=ExtResource("12_3so38")]
+position = Vector2(0, -5473)
+scale = Vector2(1.1, 1.1)
+
+[node name="LinkedBreakableBlock12" parent="LinkedBlocks" instance=ExtResource("12_3so38")]
+position = Vector2(0, -6772)
+scale = Vector2(1.5, 1.5)
+
+[node name="LinkedBreakableBlock13" parent="LinkedBlocks" instance=ExtResource("12_3so38")]
+position = Vector2(0, -6814)
+scale = Vector2(1.5, 1.5)
+
+[node name="LinkedBreakableBlock14" parent="LinkedBlocks" instance=ExtResource("12_3so38")]
+position = Vector2(0, -6856)
+scale = Vector2(1.5, 1.5)
+
+[node name="LinkedBreakableBlock11" parent="LinkedBlocks" instance=ExtResource("12_3so38")]
+position = Vector2(0, -5473)
+scale = Vector2(0.9, 0.9)
+
+[node name="LinkedBreakableBlock6" parent="LinkedBlocks" instance=ExtResource("12_3so38")]
+position = Vector2(0, -4255)
+scale = Vector2(1.5, 1.5)
+
+[node name="LinkedBreakableBlock7" parent="LinkedBlocks" instance=ExtResource("12_3so38")]
+position = Vector2(0, -4255)
+scale = Vector2(1.3, 1.3)
+
+[node name="LinkedBreakableBlock8" parent="LinkedBlocks" instance=ExtResource("12_3so38")]
+position = Vector2(0, -4255)
+scale = Vector2(1.1, 1.1)
+
+[node name="LinkedBreakableBlock9" parent="LinkedBlocks" instance=ExtResource("12_3so38")]
+position = Vector2(0, -4255)
+scale = Vector2(0.9, 0.9)
+
+[node name="LinkedBreakableBlock4" parent="LinkedBlocks" instance=ExtResource("12_3so38")]
+position = Vector2(0, -5103)
+scale = Vector2(0.3, 0.3)
+
+[node name="LinkedBreakableBlock5" parent="LinkedBlocks" instance=ExtResource("12_3so38")]
+position = Vector2(0, -5101)
+scale = Vector2(0.2, 0.2)
+
+[node name="LinkedBreakableBlock15" parent="LinkedBlocks" instance=ExtResource("15_alh3a")]
+position = Vector2(-2, -4204)
+scale = Vector2(1.48, 1.48)
+
+[node name="LinkedBreakableBlock16" parent="LinkedBlocks" instance=ExtResource("15_alh3a")]
+position = Vector2(0, -5074)
+scale = Vector2(0.37, 0.37)
+
+[node name="LinkedBreakableBlock17" parent="LinkedBlocks" instance=ExtResource("16_4q8tf")]
+position = Vector2(-1, -5431)
+scale = Vector2(1.105, 1.105)
+
+[node name="LinkedBreakableBlock" parent="LinkedBlocks" instance=ExtResource("12_3so38")]
+position = Vector2(2, -7323)
+scale = Vector2(2.37, 2.37)
+
+[node name="Coins" type="Node2D" parent="."]
+
+[node name="coin13" parent="Coins" instance=ExtResource("13_3cx6b")]
+position = Vector2(-422, -15741)
+
+[node name="coin14" parent="Coins" instance=ExtResource("13_3cx6b")]
+position = Vector2(48, -16168)
+
+[node name="coin15" parent="Coins" instance=ExtResource("13_3cx6b")]
+position = Vector2(399, -16779)
+
+[node name="coin10" parent="Coins" instance=ExtResource("13_3cx6b")]
+position = Vector2(465, -11761)
+
+[node name="coin11" parent="Coins" instance=ExtResource("13_3cx6b")]
+position = Vector2(468, -13454)
+
+[node name="coin12" parent="Coins" instance=ExtResource("13_3cx6b")]
+position = Vector2(-466, -12757)
+
+[node name="coin" parent="Coins" instance=ExtResource("13_3cx6b")]
+position = Vector2(-315, -1239)
+
+[node name="coin2" parent="Coins" instance=ExtResource("13_3cx6b")]
+position = Vector2(403, -1759)
+
+[node name="coin3" parent="Coins" instance=ExtResource("13_3cx6b")]
+position = Vector2(467, -2621)
+
+[node name="coin4" parent="Coins" instance=ExtResource("13_3cx6b")]
+position = Vector2(-122, -5152)
+
+[node name="coin5" parent="Coins" instance=ExtResource("13_3cx6b")]
+position = Vector2(-455, -4614)
+
+[node name="coin6" parent="Coins" instance=ExtResource("13_3cx6b")]
+position = Vector2(141, -6071)
+
+[node name="coin7" parent="Coins" instance=ExtResource("13_3cx6b")]
+position = Vector2(-395, -8750)
+
+[node name="coin8" parent="Coins" instance=ExtResource("13_3cx6b")]
+position = Vector2(116, -7988)
+
+[node name="coin9" parent="Coins" instance=ExtResource("13_3cx6b")]
+position = Vector2(-455, -9653)
 
 [connection signal="body_entered" from="TheVoid" to="." method="_on_the_void_body_entered"]
