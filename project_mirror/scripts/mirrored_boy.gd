@@ -96,19 +96,19 @@ func _physics_process(delta: float) -> void:
 	animatedSprite2d.play(anim2play)
 	
 	if issuperboyd:
-		anim2play = "superboyd"
+		anim2play = "SuperI"
 		if Input.is_action_pressed("uparrow"):
 			velocity.y =  -1 * 150 * delta * 60
-			anim2play = "superboyd2"
+			anim2play = "SuperU"
 		elif Input.is_action_pressed("downarrow"):
 			velocity.y =  1 * 150 * delta * 60
-			anim2play = "superboyd2"
+			anim2play = "SuperL"
 		elif Input.is_action_pressed("rightarrow"):
 			velocity.x =  1 * 150 * delta * 60
-			anim2play = "superboyd2"
+			anim2play = "SuperR"
 		elif Input.is_action_pressed("leftarrow"):
 			velocity.x =  -1 * 150 * delta * 60
-			anim2play = "superboyd2"
+			anim2play = "SuperL"
 		else :
 			velocity.x = 0
 			velocity.y = 0
