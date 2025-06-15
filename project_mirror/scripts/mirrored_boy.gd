@@ -15,6 +15,7 @@ var canjump = true
 @onready var timer: Timer = $Timer
 @onready var timer_2: Timer = $Timer2
 
+var pushables
 var bullet = load("res://Scenes/Bullet.tscn")
 var double_jump: bool = true
 var anim2play: String = "Idle"
@@ -112,14 +113,11 @@ func _physics_process(delta: float) -> void:
 		else :
 			velocity.x = 0
 			velocity.y = 0
-		#if isPushing:
-		#	var pushables = nodeToPush.get_children()
-		#	for node in pushables:
-		#		node.apply_central_impulse(Vector2(0, -50))
 		move_and_slide()
 	if animatedSprite2d.animation != anim2play:
 		animatedSprite2d.play(anim2play)
 	animatedSprite2d.play(anim2play)
+	
 	
 	
 func _on_timer_timeout() -> void:
@@ -131,13 +129,13 @@ func _on_timer_2_timeout() -> void:
 
 func _on_push_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Breakable") && issuperboyd:
-		var pushables = body.get_parent().get_children()
+		pushables = body.get_parent().get_children()
 		for node in  pushables:
-			node.apply_central_impulse(Vector2(0, -50))
+			node.apply_central_impulse(Vector2(0, -70))
 		print(nodeToPush)
 
 func _on_push_area_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Breakable") && issuperboyd:
-		var pushables = body.get_parent().get_children()
+		pushables = body.get_parent().get_children()
 		for node in  pushables:
 			node.apply_central_impulse(Vector2(0, 50))
