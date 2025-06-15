@@ -1,8 +1,9 @@
-[gd_scene load_steps=22 format=3 uid="uid://da3oxre7ja4qi"]
+[gd_scene load_steps=23 format=3 uid="uid://da3oxre7ja4qi"]
 
 [ext_resource type="Script" uid="uid://dwoics6ve8dnk" path="res://Scripts/the_boy.gd" id="1_ao2qc"]
 [ext_resource type="Texture2D" uid="uid://dqwrn2elyv8bv" path="res://Assets/Textures/Boy.png" id="2_fh7so"]
 [ext_resource type="AudioStream" uid="uid://miyxkbaarige" path="res://Assets/Sounds/Gamejam (hyppy).mp3" id="3_fjgrw"]
+[ext_resource type="Script" uid="uid://diyoehvwmsdlv" path="res://Scripts/boyAudio.gd" id="4_pketp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fjgrw"]
 atlas = ExtResource("2_fh7so")
@@ -163,5 +164,6 @@ one_shot = true
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_fjgrw")
 volume_db = -15.0
+script = ExtResource("4_pketp")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
