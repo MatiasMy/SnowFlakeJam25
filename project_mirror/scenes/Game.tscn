@@ -783,4 +783,49 @@ position = Vector2(-445, -9650)
 [node name="LinkedBreakableBlock" parent="." instance=ExtResource("12_3so38")]
 position = Vector2(0, -206)
 
+[node name="Label2" type="Label" parent="."]
+offset_left = 199.0
+offset_top = -4173.0
+offset_right = 258.0
+offset_bottom = -4150.0
+rotation = -1.59322
+text = "------>"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 103.0
+offset_top = -4183.0
+offset_right = 186.0
+offset_bottom = -4160.0
+text = "Shoot this:"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 203.0
+offset_top = -7261.0
+offset_right = 262.0
+offset_bottom = -7238.0
+rotation = -1.59322
+text = "------>"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 117.0
+offset_top = -7279.0
+offset_right = 200.0
+offset_bottom = -7256.0
+text = "Lift this up"
+
+[node name="Label5" type="Label" parent="."]
+offset_left = -199.0
+offset_top = -7433.0
+offset_right = -140.0
+offset_bottom = -7410.0
+rotation = 1.57239
+text = "------>"
+
+[node name="Label6" type="Label" parent="."]
+offset_left = -325.0
+offset_top = -7384.0
+offset_right = -240.0
+offset_bottom = -7361.0
+text = "Stand here"
+
 [connection signal="body_entered" from="voids/TheVoid" to="." method="_on_the_void_body_entered"]
