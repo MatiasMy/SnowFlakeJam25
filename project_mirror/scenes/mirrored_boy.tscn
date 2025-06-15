@@ -295,6 +295,7 @@ volume_db = -15.0
 stream = ExtResource("5_1nhnw")
 
 [node name="PushArea" type="Area2D" parent="."]
+collision_mask = 64
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PushArea"]
 position = Vector2(0, -13)
