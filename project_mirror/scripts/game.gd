@@ -12,7 +12,6 @@ func _ready() -> void:
 	)
 
 func _process(delta: float) -> void:
-	print(HighScore.volume)
 	score += 2*delta
 	ui.updateScore(score)
 	ui.updateHighScore(score)
