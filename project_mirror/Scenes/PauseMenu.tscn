@@ -41,6 +41,7 @@ offset_left = -90.0
 offset_right = 90.0
 offset_bottom = 60.0
 grow_horizontal = 2
+value = 70.0
 script = ExtResource("1_lj4oq")
 
 [node name="Label" type="Label" parent="Base"]

@@ -10,3 +10,4 @@ func _on_value_changed(value: float) -> void:
 		linear_to_db(value)
 	)
 	HighScore.volume = value
+	

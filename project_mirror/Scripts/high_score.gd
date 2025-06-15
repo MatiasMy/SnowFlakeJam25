@@ -1,4 +1,4 @@
 extends Node
 
 var score: int = 0
-var volume: float = 0.7
+var volume: float = 70
