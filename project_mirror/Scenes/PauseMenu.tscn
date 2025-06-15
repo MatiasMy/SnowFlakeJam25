@@ -20,6 +20,7 @@ grow_vertical = 2
 color = Color(0.47451, 0.47451, 0.47451, 0.172549)
 
 [node name="Base" type="ColorRect" parent="."]
+z_index = 2
 layout_mode = 1
 anchors_preset = 13
 anchor_left = 0.5
