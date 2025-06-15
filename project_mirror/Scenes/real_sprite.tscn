@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://b86ex5nyhiyeh"]
+
+[ext_resource type="Texture2D" uid="uid://dseesnf71cwmy" path="res://Assets/Textures/LinkedBlocks.png" id="1_8numr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2n65q"]
+size = Vector2(32, 32)
+
+[node name="RealSprite" type="RigidBody2D"]
+collision_layer = 5
+collision_mask = 128
+gravity_scale = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, 2)
+texture = ExtResource("1_8numr")
+vframes = 2
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_2n65q")
